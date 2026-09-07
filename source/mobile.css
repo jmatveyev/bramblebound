@@ -1,0 +1,206 @@
+/* Phone-sized layouts preserve the game view and browser-native menu scrolling. */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+html, body { overscroll-behavior: none; -webkit-text-size-adjust: 100%; }
+button, a, select { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button { -webkit-touch-callout: none; }
+#world, #hud, #touch, #wash, #fade, .screen, #boot {
+  height: var(--app-height, 100dvh); bottom: auto;
+}
+.screen { overscroll-behavior: contain; touch-action: pan-y pinch-zoom; }
+.mobile-only { display: none; }
+.touch-on .mobile-only { display: block; }
+.touch-on .desktop-only { display: none; }
+.touch-on .screen {
+  padding: calc(18px + var(--safe-top)) calc(20px + var(--safe-right))
+    calc(18px + var(--safe-bottom)) calc(20px + var(--safe-left));
+  -webkit-overflow-scrolling: touch;
+}
+.touch-on .paper { margin: auto; }
+.touch-on button, .touch-on .setting select { min-height: 44px; }
+.touch-on .linkbtn { padding: 12px 3px; }
+.touch-on .menu-sub { flex-wrap: wrap; column-gap: 18px; row-gap: 0; margin-top: 6px; }
+.touch-on .menu-bottom { margin-top: 14px; }
+.touch-on .setting { gap: 16px; min-height: 52px; }
+.touch-on .setting label { flex: 1; padding: 8px 0; }
+.touch-on .setting input[type=range] { height: 44px; width: 125px; }
+.touch-on .setting input[type=checkbox] { width: 26px; height: 26px; }
+.touch-on .setting select { font-size: 16px; max-width: 170px; }
+.touch-on .hint-note { font-size: 12px !important; }
+.touch-on .hud-top {
+  top: calc(14px + var(--safe-top)); left: calc(16px + var(--safe-left));
+  right: calc(16px + var(--safe-right));
+}
+.touch-on .roundbtn { width: 46px; height: 46px; font-size: 20px; }
+.touch-on .hearts { gap: 3px; height: auto; min-height: 26px; max-width: 194px; flex-wrap: wrap; }
+.touch-on .heart { width: 22px; height: 23px; }
+.touch-on .health-label { display: none; }
+.touch-on .purse { margin-top: 5px; font-size: 14px; }
+.touch-on .purse .moths { font-size: 9px; margin-left: 6px; }
+.touch-on .chimes {
+  top: calc(79px + var(--safe-top)); left: calc(16px + var(--safe-left));
+  transform: none; gap: 6px;
+}
+.touch-on .chime-dot { width: 26px; height: 26px; font-size: 16px; }
+.touch-on #minimap {
+  top: calc(71px + var(--safe-top)); right: calc(18px + var(--safe-right));
+  width: 88px; height: 88px;
+}
+.touch-on .place-label { top: calc(166px + var(--safe-top)); right: calc(18px + var(--safe-right)); font-size: 8px; }
+.touch-on .objective {
+  left: calc(16px + var(--safe-left)); top: calc(124px + var(--safe-top));
+  bottom: auto; max-width: min(57vw, 255px); padding: 6px 8px 6px 10px;
+  background: linear-gradient(90deg, #123c308c, transparent); border-radius: 0 5px 5px 0;
+}
+.touch-on .objective strong { font-size: 17px; margin: 4px 0; }
+.touch-on .objective small { font-size: 8px; }
+.touch-on .objective p { font-size: 10px; line-height: 1.5; }
+.touch-on #bossHud { top: calc(119px + var(--safe-top)); width: min(290px, 70%); }
+.touch-on.boss-active .objective { display: none; }
+.touch-on #touch { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.touch-on #stick {
+  width: 112px; height: 112px; left: calc(22px + var(--safe-left));
+  bottom: calc(34px + var(--safe-bottom)); border: 2px solid #f7e2a58c;
+  background: radial-gradient(circle, #204d4490 0 65%, #ffe19f18 67% 100%);
+  box-shadow: 0 2px 14px #15362c50; touch-action: none;
+}
+.touch-on #knob {
+  width: 44px; height: 44px; left: calc(50% - 22px); top: calc(50% - 22px);
+  background: #efdaa5c9; box-shadow: 0 2px 8px #123b3670;
+}
+.touch-on #stick.running { border-color: #ffe9a4; box-shadow: 0 0 16px #e5d18d66; }
+#stickCaption {
+  position: absolute; bottom: -23px; left: -12px; width: calc(100% + 24px);
+  text-align: center; font-size: 7px; letter-spacing: .05em; color: #fff0c7;
+  text-shadow: 0 1px 4px #102f22; white-space: nowrap;
+}
+.touch-on .touch-actions {
+  display: grid; grid-template-columns: repeat(3, 54px); gap: 9px;
+  right: calc(18px + var(--safe-right)); bottom: calc(27px + var(--safe-bottom));
+  pointer-events: none;
+}
+.touch-on .touchbtn {
+  position: relative; width: 54px; height: 54px; min-height: 54px;
+  pointer-events: auto; touch-action: none; border: 1px solid #fbe8b99c;
+  background: #234b40ed; color: #fff2cb; font: bold 11px Trebuchet MS, Arial, sans-serif;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; box-shadow: 0 3px 10px #14312877; padding: 0;
+}
+.touchbtn .minor { font: 7px Trebuchet MS, Arial, sans-serif; letter-spacing: .015em; opacity: .85; }
+.touch-on .touchbtn.jump { background: #f2d48c; color: #294737; font-size: 12px; }
+.touch-on .touchbtn.held, .touch-on .touchbtn:active { transform: scale(.93); background: #6b8660; }
+.touch-on .touchbtn.jump.held { background: #fff0bf; }
+.touch-on .touchbtn.ready { border-color: #ffeaba; box-shadow: 0 0 14px #ffe0a448; }
+.touch-on .touchbtn:disabled { opacity: .4; }
+.touch-on .touchbtn.cooldown:not(:disabled) { opacity: .68; }
+#touchBlade:before {
+  content: ''; position: absolute; inset: -4px; pointer-events: none;
+  border-radius: 50%; background: conic-gradient(#f9df87 var(--charge,0deg), transparent 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+}
+#touchBlade.charged { background: #655d30; border-color: #fff0a6; }
+.touch-on #prompt {
+  top: auto; bottom: calc(180px + var(--safe-bottom)); max-width: 88%;
+  min-height: 44px; padding: 12px 15px; white-space: normal; width: max-content;
+  font-size: 12px; pointer-events: auto; touch-action: manipulation;
+}
+.touch-on #contextHint {
+  top: auto; bottom: calc(237px + var(--safe-bottom)); max-width: 86%;
+  font-size: 11px; padding: 10px 14px;
+}
+.touch-on #toast { top: calc(221px + var(--safe-top)); max-width: 85%; font-size: 12px; }
+.touch-on #areaCard { top: 39%; }
+.touch-on #areaCard h2 { font-size: 30px; }
+.touch-on #dialogue {
+  bottom: calc(20px + var(--safe-bottom)); width: auto;
+  left: calc(16px + var(--safe-left)); right: calc(16px + var(--safe-right));
+  transform: none; max-height: calc(var(--app-height, 100dvh) - var(--safe-top) - var(--safe-bottom) - 30px);
+  overflow: auto; overscroll-behavior: contain;
+}
+.touch-on .dialogue-card { gap: 12px; padding: 19px; }
+.touch-on .dialog-text p { font-size: 14px; line-height: 1.65; }
+.touch-on .dialog-text .next { font-size: 11px; }
+.touch-on .portrait { width: 48px; height: 48px; font-size: 26px; }
+.touch-on #bigmap { height: auto; aspect-ratio: 1000 / 410; min-height: 140px; object-fit: contain; }
+#atlasRegions { display: none; }
+.touch-on #atlasRegions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 13px 0; }
+#atlasRegions span { font-size: 11px; padding: 8px; border: 1px solid #75916644; border-radius: 4px; }
+#saveCode {
+  width: 100%; height: 170px; padding: 12px; border-radius: 5px; border: 1px solid #75916666;
+  resize: vertical; background: #fff8e4; color: #234936; font: 16px/1.5 monospace;
+  overflow-wrap: anywhere; white-space: pre-wrap; user-select: text; -webkit-user-select: text;
+}
+#saveToolsStatus { min-height: 48px; }
+#touchRescue {
+  display: none; position: fixed; z-index: 37; top: calc(8px + var(--safe-top));
+  right: calc(12px + var(--safe-right)); min-height: 44px; padding: 8px 13px;
+  background: #f2d48c; color: #234936; border-radius: 6px; font-size: 12px;
+}
+#touchRescue.available { display: block; }
+.rotate-note { color: #e9d695; font-size: 11px; margin: 12px 0 0; line-height: 1.65; }
+@media (min-width: 651px) and (min-height: 571px) {
+  .touch-on .objective { max-width: 280px; }
+  .touch-on #stick { width: 126px; height: 126px; left: calc(35px + var(--safe-left)); bottom: calc(42px + var(--safe-bottom)); }
+  .touch-on .touch-actions { grid-template-columns: repeat(3, 62px); gap: 12px; right: calc(32px + var(--safe-right)); bottom: calc(36px + var(--safe-bottom)); }
+  .touch-on .touchbtn { width: 62px; height: 62px; }
+}
+@media (max-width: 360px) {
+  .touch-on .screen { padding-left: calc(14px + var(--safe-left)); padding-right: calc(14px + var(--safe-right)); }
+  .touch-on .paper { padding: 21px 17px; }
+  .touch-on .title-block h1 { font-size: 66px; }
+  .touch-on #stick { width: 94px; height: 94px; left: calc(17px + var(--safe-left)); }
+  .touch-on .touch-actions { grid-template-columns: repeat(3, 48px); gap: 7px; right: calc(13px + var(--safe-right)); }
+  .touch-on .touchbtn { width: 48px; height: 48px; min-height: 48px; font-size: 10px; }
+  .touch-on .hearts { max-width: 145px; }
+  .touch-on .heart { width: 19px; height: 20px; }
+  .touch-on .setting { gap: 10px; font-size: 11px; }
+  .touch-on .setting select { max-width: 152px; font-size: 14px; }
+}
+@media (max-height: 570px) and (orientation: landscape) {
+  .touch-on .screen { padding-top: calc(14px + var(--safe-top)); padding-bottom: calc(14px + var(--safe-bottom)); }
+  .touch-on .menu .title-block { max-width: 520px; padding-top: 8px; }
+  .touch-on .menu-bottom, .touch-on .intro, .touch-on .postcard, .touch-on .rotate-note { display: none; }
+  .touch-on .title-block h1 { font-size: clamp(46px, 7vw, 65px); }
+  .touch-on .menu-sub { margin-top: 0; }
+  .touch-on .menu-actions { max-width: 340px; }
+  .touch-on .menu-actions .primary, .touch-on .menu-actions .secondary { padding: 10px 17px; }
+  .touch-on .title-block .subtitle { margin: 12px 0; }
+  .touch-on .objective { top: calc(72px + var(--safe-top)); max-width: 225px; }
+  .touch-on .objective p, .touch-on .objective small { display: none; }
+  .touch-on .objective strong { font-size: 16px; margin: 0; }
+  .touch-on .chimes { left: 50%; top: calc(15px + var(--safe-top)); transform: translateX(-50%); }
+  .touch-on #bossHud { top: calc(54px + var(--safe-top)); width: min(300px,42%); }
+  .touch-on #bossHud .name { font-size: 15px; }
+  .touch-on #bossHud small { display: none; }
+  .touch-on #bossCue { font-size: 10px; margin-top: 6px; }
+  .touch-on #minimap { display: none; }
+  .touch-on .place-label { top: calc(69px + var(--safe-top)); }
+  .touch-on #stick { width: 102px; height: 102px; left: calc(25px + var(--safe-left)); bottom: calc(31px + var(--safe-bottom)); }
+  .touch-on .touch-actions { grid-template-columns: repeat(3, 50px); gap: 8px; bottom: calc(22px + var(--safe-bottom)); right: calc(22px + var(--safe-right)); }
+  .touch-on .touchbtn { width: 50px; height: 50px; min-height: 50px; }
+  .touch-on #prompt { bottom: calc(42px + var(--safe-bottom)); max-width: calc(100% - 410px - var(--safe-left) - var(--safe-right)); min-width: 150px; font-size: 11px; }
+  .touch-on #contextHint { bottom: calc(99px + var(--safe-bottom)); max-width: calc(100% - 400px - var(--safe-left) - var(--safe-right)); font-size: 10px; }
+  .touch-on #toast { top: calc(90px + var(--safe-top)); max-width: 42%; font-size: 11px; }
+  .touch-on #areaCard { top: 34%; }
+  .touch-on #areaCard h2 { font-size: 25px; }
+  .touch-on #bigmap { min-height: 0; max-height: 245px; }
+  .touch-on #dialogue { bottom: calc(13px + var(--safe-bottom)); }
+  .touch-on .dialogue-card { padding: 14px 20px; }
+  .touch-on .dialog-text p { font-size: 13px; min-height: 0; }
+  .touch-on .reward-content { margin: auto; padding: 8px 0; }
+  .touch-on .reward-emblem { width: 58px; height: 58px; font-size: 35px; margin-bottom: 10px; }
+  .touch-on .reward-content h2 { font-size: 30px; }
+  .touch-on .reward-content p { margin: 10px 0 14px; line-height: 1.65; }
+}
+@media (max-height: 370px) and (orientation: landscape) {
+  .touch-on .screen .paper { padding: 21px; }
+  .touch-on #contextHint { display: none; }
+  .touch-on .objective { top: calc(68px + var(--safe-top)); max-width: 200px; }
+}
+
+.touch-on .setting.mobile-only { display: flex; }

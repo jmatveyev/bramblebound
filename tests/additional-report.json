@@ -1,0 +1,212 @@
+{
+  "tests": [
+    {
+      "name": "Actual Begin adventure button starts play without pointer lock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Browser keyboard events drive movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Browser Escape key opens pause",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Resume button works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Space resumes even with pause button focused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real Tab key opens atlas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Journal supplies a concrete current-puzzle hint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A quick mouse click is not lost between frames",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Holding mouse attack charges a spinning attack",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Right-drag changes camera-relative movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Window blur pauses and clears controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Performance graphics disables expensive shadow and bloom passes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Escape exits settings even when a setting has keyboard focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "High graphics allocates native 5120 by 1440 ultrawide output",
+      "passed": true,
+      "detail": {
+        "calls": 16,
+        "triangles": 970272,
+        "width": 5120,
+        "height": 1440,
+        "hdr": true,
+        "shadows": true,
+        "safeGraphics": false
+      }
+    },
+    {
+      "name": "Unavailable browser storage is explained on pause",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Export save produces a usable JSON file",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Import save restores progression and currency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A checkpoint outside the map is replaced with a safe entrance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Return to lantern resets an unsolved stranded crate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Storage-enabled save writes valid data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A saved story exposes Continue",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Continue reloads serialized progress",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Standard gamepad left-stick mapping moves the character",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Standard gamepad A mapping jumps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Standard gamepad Start mapping pauses",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch interface appears on a touch-capable viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "On-screen joystick pointer input moves the player",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "On-screen jump button uses the jump mechanic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile settings has no horizontal document overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile shop cards are one readable column",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Long mobile shop panel keeps its heading reachable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile shop exit remains reachable by scrolling",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Safe graphics starts without HDR or shadow passes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No floating-point color extension still permits the complete game to boot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rejected HDR framebuffer retries with standard color successfully",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Missing WebGL 2 gives an actionable visible error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Exhausted graphics recovery shows an error rather than an endless loader",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No external network resource requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No uncaught JavaScript exceptions across UI and capability tests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 39,
+  "failed": [],
+  "pageErrors": [],
+  "console": [],
+  "requests": []
+}

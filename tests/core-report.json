@@ -1,0 +1,503 @@
+{
+  "tests": [
+    {
+      "name": "New game starts grounded in Hearthgrove",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "W moves forward at walking speed",
+      "passed": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "z": 11.836111111111112,
+        "hp": 8,
+        "grounded": true,
+        "floor": "village"
+      }
+    },
+    {
+      "name": "Sprint is faster than walking",
+      "passed": true,
+      "detail": {
+        "walk": 6.163888888888888,
+        "sprint": 7.931666666666658
+      }
+    },
+    {
+      "name": "Diagonal input does not exceed normal top speed",
+      "passed": true,
+      "detail": {
+        "diag": 3.9305555555555625,
+        "straight": 3.9305555555555607
+      }
+    },
+    {
+      "name": "Full jump lands and reaches the intended height",
+      "passed": true,
+      "detail": {
+        "max": 1.9933333333333338
+      }
+    },
+    {
+      "name": "Releasing Space produces a lower jump",
+      "passed": true,
+      "detail": {
+        "short": 0.8322333333333334,
+        "max": 1.9933333333333338
+      }
+    },
+    {
+      "name": "Air jump unavailable before the River Bell",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Escape pauses the game",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Simulation remains paused",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Escape resumes",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Tab opens atlas and journal",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Tab returns to play",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Moss opens dialogue",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Story conversation advances objective",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Pushing the crate solves the workshop without teleporting the crate",
+      "passed": true,
+      "detail": {
+        "crate": {
+          "id": "workshop-crate",
+          "x": 5.8,
+          "z": -4.870999999999999,
+          "y": 0,
+          "w": 1.35,
+          "d": 1.35
+        },
+        "player": {
+          "x": 5.8,
+          "y": 0,
+          "z": -3.298027777777773,
+          "hp": 8,
+          "grounded": true,
+          "floor": "village"
+        }
+      }
+    },
+    {
+      "name": "Workshop gate physically opens",
+      "passed": true,
+      "detail": {
+        "x": 12.383888888888878,
+        "y": 0,
+        "z": -4,
+        "hp": 8,
+        "grounded": true,
+        "floor": "village"
+      }
+    },
+    {
+      "name": "Workshop chest awards the Sunring",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Reward closes back to the world",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Blade input runs without blocking simulation",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Holding and releasing attack creates a charged spin",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Brookfall includes an armored beetle",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Frontal blade is blocked by beetle armor",
+      "passed": true,
+      "detail": {
+        "hp": 4,
+        "eHP": 4
+      }
+    },
+    {
+      "name": "Sunring stuns and damages beetle",
+      "passed": true,
+      "detail": {
+        "stun": 2.450000000000001,
+        "hp": 3
+      }
+    },
+    {
+      "name": "A stunned beetle can be damaged by the blade",
+      "passed": true,
+      "detail": {
+        "hp": 2,
+        "dead": false
+      }
+    },
+    {
+      "name": "Real Sunring hits brook.reed",
+      "passed": true,
+      "detail": {
+        "on": true,
+        "player": {
+          "x": -18,
+          "y": 0.35,
+          "z": -9,
+          "hp": 8,
+          "grounded": true,
+          "floor": "west-bank"
+        }
+      }
+    },
+    {
+      "name": "Real Sunring hits brook.river",
+      "passed": true,
+      "detail": {
+        "on": true,
+        "player": {
+          "x": 18,
+          "y": 1,
+          "z": -19,
+          "hp": 8,
+          "grounded": true,
+          "floor": "east-bank"
+        }
+      }
+    },
+    {
+      "name": "Real Sunring hits brook.sun",
+      "passed": true,
+      "detail": {
+        "on": true,
+        "player": {
+          "x": 5,
+          "y": 2,
+          "z": -27,
+          "hp": 8,
+          "grounded": true,
+          "floor": "shrine"
+        }
+      }
+    },
+    {
+      "name": "All runes raise a traversable physical bridge",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "River Bell grants Windstep",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Unlocked air jump resets upward velocity",
+      "passed": true,
+      "detail": {
+        "vy": 9.050000000000002
+      }
+    },
+    {
+      "name": "Moving platform carries its passenger",
+      "passed": true,
+      "detail": {
+        "player": {
+          "x": -9,
+          "y": 0.35,
+          "z": -5.188867924950645,
+          "hp": 8,
+          "grounded": true,
+          "floor": "lily-west"
+        },
+        "platform": "lily-west"
+      }
+    },
+    {
+      "name": "Falling returns to a lantern and preserves currency",
+      "passed": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "z": 19,
+        "hp": 7,
+        "grounded": true,
+        "floor": "landing"
+      }
+    },
+    {
+      "name": "Gentle mode removes fall damage",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Collectible wind spindle sun.spindle-west",
+      "passed": true,
+      "detail": {
+        "y": 2.5,
+        "player": {
+          "x": -13,
+          "y": 1.3,
+          "z": 1,
+          "hp": 7,
+          "grounded": true,
+          "floor": "west"
+        }
+      }
+    },
+    {
+      "name": "Collectible wind spindle sun.spindle-east",
+      "passed": true,
+      "detail": {
+        "y": 4.7,
+        "player": {
+          "x": 13,
+          "y": 3.5,
+          "z": -9,
+          "hp": 7,
+          "grounded": true,
+          "floor": "east"
+        }
+      }
+    },
+    {
+      "name": "Collectible wind spindle sun.spindle-high",
+      "passed": true,
+      "detail": {
+        "y": 6.6000000000000005,
+        "player": {
+          "x": -10,
+          "y": 5.4,
+          "z": -22,
+          "hp": 7,
+          "grounded": true,
+          "floor": "upper-west"
+        }
+      }
+    },
+    {
+      "name": "Sky Bell grants empowered charged spin",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Dark brambles resist ordinary swings",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Empowered charged spin destroys dark brambles",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Interactive prism rotates to its correct bearing a",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Interactive prism rotates to its correct bearing b",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Interactive prism rotates to its correct bearing c",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Complete prism path activates the Moon Bell",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Third bell completes core region progression",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Heart vessel spends exactly its price and adds a heart",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Traveler sash purchase persists",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Long ring purchase persists",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Duplicate equipment cannot be charged twice",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Shop closes to gameplay",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Progress serializes and validates with equipment and bells intact",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Incompatible save file is rejected",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Six distinct moth secrets are collectible",
+      "passed": true,
+      "detail": {
+        "moths": [
+          "hearth-star",
+          "brook-star",
+          "hollow-star",
+          "sun-star-low",
+          "sun-star-high",
+          "moon-star"
+        ]
+      }
+    },
+    {
+      "name": "Pip rewards completion with a permanent heart",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Pip reward cannot be repeated",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Final guardian wakes as the player enters",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Boss cannot take blade damage while armored",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Boss eye opening can be stunned by the actual ring, cycle 0",
+      "passed": true,
+      "detail": {
+        "mode": "stunned",
+        "hp": 18
+      }
+    },
+    {
+      "name": "Boss eye opening can be stunned by the actual ring, cycle 1",
+      "passed": true,
+      "detail": {
+        "mode": "stunned",
+        "hp": 12
+      }
+    },
+    {
+      "name": "Boss eye opening can be stunned by the actual ring, cycle 2",
+      "passed": true,
+      "detail": {
+        "mode": "stunned",
+        "hp": 6
+      }
+    },
+    {
+      "name": "Guardian requires multiple vulnerability windows",
+      "passed": true,
+      "detail": {
+        "healthAfterWindows": [
+          12,
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Winning triggers the original ending dialogue",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Ending screen is reachable through real attacks",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "Postgame exploration returns to the village",
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "passed": 63,
+  "failed": [],
+  "diagnostics": {
+    "game": "Bramblebound 1.1 - touch edition",
+    "time": "2026-09-07T14:23:38.120Z",
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
+    "size": [
+      800,
+      600
+    ],
+    "urlType": "about:",
+    "errors": [],
+    "graphics": {
+      "calls": 16,
+      "triangles": 933672,
+      "width": 800,
+      "height": 600,
+      "hdr": true,
+      "shadows": true,
+      "safeGraphics": false
+    },
+    "room": "crown",
+    "state": "transition",
+    "storage": false,
+    "touch": false,
+    "touchPoints": 0,
+    "dpr": 1
+  },
+  "errors": [],
+  "console": []
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.1-mobile",
+  "sha256": "f8693ac6b5d52e2f0c01ca8f2774803a2e1934c62ebcad7c98ceaba2cc23c51c",
+  "bytes": 209378,
+  "game_browser_checks": 279,
+  "local_server_checks": 5,
+  "total_checks": 284,
+  "reports": {
+    "core": 63,
+    "route": 23,
+    "additional": 39,
+    "mobile": 117,
+    "route-touch": 23,
+    "mobile-capabilities": 14,
+    "server": 5
+  },
+  "reproducible_source_build": true,
+  "physical_mobile_hardware_tested": false,
+  "safari_tested": false,
+  "public_url_published": false
+}

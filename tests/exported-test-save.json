@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "room": "hearth",
+  "checkpoint": {
+    "room": "hearth",
+    "x": 0,
+    "y": 0,
+    "z": 16
+  },
+  "bells": [
+    false,
+    false,
+    false
+  ],
+  "ring": true,
+  "airjump": false,
+  "empowered": false,
+  "coins": 42,
+  "totalAcorns": 42,
+  "maxHp": 8,
+  "flags": {},
+  "collected": [
+    "hearth.trail0",
+    "hearth.trail1"
+  ],
+  "moths": [],
+  "defeated": [],
+  "prisms": [
+    0,
+    2,
+    1
+  ],
+  "won": false,
+  "stats": {
+    "time": 3.9333333333333242,
+    "jumps": 0,
+    "falls": 0,
+    "kills": 0,
+    "steps": 7.861111111111091
+  }
+}

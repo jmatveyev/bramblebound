@@ -1,0 +1,1094 @@
+{
+  "inputMethod": "DOM touch pointer events and deterministic steps; no teleport, ability flags, invulnerability, or damage helpers",
+  "tests": [
+    {
+      "name": "Workshop solved with actual controls",
+      "passed": true,
+      "detail": {
+        "x": 5.91,
+        "y": 0,
+        "z": -2.39,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "name": "Sunring obtained through the real workshop",
+      "passed": true,
+      "detail": {
+        "x": 12.62,
+        "y": 0,
+        "z": -4.02,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "name": "Actual portal travel to brook",
+      "passed": true,
+      "detail": {
+        "room": "brook"
+      }
+    },
+    {
+      "name": "Western river rune is lit on foot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Eastern rune is lit on foot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Third rune is reachable before the bridge opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "River Bell reached with uninterrupted physical traversal",
+      "passed": true,
+      "detail": {
+        "x": 0.05,
+        "y": 2,
+        "z": -31.42,
+        "hp": 8,
+        "ground": "shrine"
+      }
+    },
+    {
+      "name": "Actual portal travel to hearth",
+      "passed": true,
+      "detail": {
+        "room": "hearth"
+      }
+    },
+    {
+      "name": "Actual portal travel to sun",
+      "passed": true,
+      "detail": {
+        "room": "sun"
+      }
+    },
+    {
+      "name": "First wind spindle reached on foot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crosswind landing on moving platform",
+      "passed": true,
+      "detail": {
+        "x": -2.77,
+        "y": 2.4,
+        "z": -1.08,
+        "hp": 8,
+        "ground": "crosswind"
+      }
+    },
+    {
+      "name": "Second wind spindle reached on foot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highwind landing on moving platform",
+      "passed": true,
+      "detail": {
+        "x": 2.54,
+        "y": 4.5,
+        "z": -15.08,
+        "hp": 7,
+        "ground": "highwind"
+      }
+    },
+    {
+      "name": "Third wind spindle reached on foot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Sky Bell reached by actual air jumps",
+      "passed": true,
+      "detail": {
+        "x": 1.18,
+        "y": 7.3,
+        "z": -32.34,
+        "hp": 8,
+        "ground": "peak"
+      }
+    },
+    {
+      "name": "Actual portal travel to hearth",
+      "passed": true,
+      "detail": {
+        "room": "hearth"
+      }
+    },
+    {
+      "name": "Actual portal travel to moon",
+      "passed": true,
+      "detail": {
+        "room": "moon"
+      }
+    },
+    {
+      "name": "Prism chain solved through actual interactions",
+      "passed": true,
+      "detail": {
+        "x": 10.08,
+        "y": 0,
+        "z": -25.13,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "name": "Third Bell reached through the full route",
+      "passed": true,
+      "detail": {
+        "x": -9.14,
+        "y": 1.1,
+        "z": -25.2,
+        "hp": 8,
+        "ground": "moon-dais"
+      }
+    },
+    {
+      "name": "Actual portal travel to hearth",
+      "passed": true,
+      "detail": {
+        "room": "hearth"
+      }
+    },
+    {
+      "name": "Actual portal travel to crown",
+      "passed": true,
+      "detail": {
+        "room": "crown"
+      }
+    },
+    {
+      "name": "Full guardian defeated using normal movement, jumping, ring and blade input",
+      "passed": true,
+      "detail": {
+        "frames": 1316,
+        "health": 8,
+        "faints": 0,
+        "phases": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "name": "Complete uninterrupted adventure reaches its ending",
+      "passed": true,
+      "detail": {
+        "time": 191.43333333337782,
+        "falls": 0
+      }
+    }
+  ],
+  "trace": [
+    {
+      "label": "Moss",
+      "ok": true,
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "z": 4.92,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "crate",
+      "ok": true,
+      "pose": {
+        "x": 5.91,
+        "y": 0,
+        "z": 2.1,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "workshop doorway",
+      "ok": true,
+      "pose": {
+        "x": 8.03,
+        "y": 0,
+        "z": -4.18,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "workshop chest",
+      "ok": true,
+      "pose": {
+        "x": 12.62,
+        "y": 0,
+        "z": -4.02,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "leave workshop",
+      "ok": true,
+      "pose": {
+        "x": 7.92,
+        "y": 0,
+        "z": -4.02,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "go around workshop fence",
+      "ok": true,
+      "pose": {
+        "x": 7.92,
+        "y": 0,
+        "z": 1.44,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "past workshop",
+      "ok": true,
+      "pose": {
+        "x": 20.18,
+        "y": 0,
+        "z": 1.37,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "arch to brook",
+      "ok": true,
+      "pose": {
+        "x": 21.11,
+        "y": 0,
+        "z": -1.14,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "left bank approach",
+      "ok": true,
+      "pose": {
+        "x": -6.12,
+        "y": 0,
+        "z": 12.17,
+        "hp": 8,
+        "ground": "landing"
+      }
+    },
+    {
+      "label": "left stepping stone",
+      "ok": true,
+      "pose": {
+        "x": -7.61,
+        "y": 0.2,
+        "z": 7.5,
+        "hp": 8,
+        "ground": "left-step"
+      },
+      "frames": 44
+    },
+    {
+      "label": "west bank",
+      "ok": true,
+      "pose": {
+        "x": -13.02,
+        "y": 0.35,
+        "z": 7.96,
+        "hp": 8,
+        "ground": "west-bank"
+      },
+      "frames": 47
+    },
+    {
+      "label": "west rune",
+      "ok": true,
+      "pose": {
+        "x": -18.08,
+        "y": 0.35,
+        "z": -8.59,
+        "hp": 8,
+        "ground": "west-bank"
+      }
+    },
+    {
+      "label": "west rune",
+      "pose": {
+        "x": -18.08,
+        "y": 0.35,
+        "z": -8.59,
+        "hp": 8,
+        "ground": "west-bank"
+      },
+      "switches": [
+        [
+          "brook.reed",
+          true
+        ],
+        [
+          "brook.river",
+          false
+        ],
+        [
+          "brook.sun",
+          false
+        ]
+      ]
+    },
+    {
+      "label": "west bank crossing",
+      "ok": true,
+      "pose": {
+        "x": -11.1,
+        "y": 0.35,
+        "z": -4.89,
+        "hp": 8,
+        "ground": "west-bank"
+      }
+    },
+    {
+      "label": "jump west bank to mill",
+      "ok": true,
+      "pose": {
+        "x": -5.04,
+        "y": 0.65,
+        "z": -4.89,
+        "hp": 8,
+        "ground": "mill"
+      },
+      "frames": 44
+    },
+    {
+      "label": "mill east side",
+      "ok": true,
+      "pose": {
+        "x": 5.8,
+        "y": 0.65,
+        "z": -10.02,
+        "hp": 8,
+        "ground": "mill"
+      }
+    },
+    {
+      "label": "east stone",
+      "ok": true,
+      "pose": {
+        "x": 9.53,
+        "y": 0.85,
+        "z": -10.02,
+        "hp": 8,
+        "ground": "east-step"
+      },
+      "frames": 50
+    },
+    {
+      "label": "east bank",
+      "ok": true,
+      "pose": {
+        "x": 13.56,
+        "y": 1,
+        "z": -10.02,
+        "hp": 8,
+        "ground": "east-bank"
+      },
+      "frames": 55
+    },
+    {
+      "label": "east rune",
+      "ok": true,
+      "pose": {
+        "x": 18.12,
+        "y": 1,
+        "z": -18.69,
+        "hp": 8,
+        "ground": "east-bank"
+      }
+    },
+    {
+      "label": "east rune",
+      "pose": {
+        "x": 18.12,
+        "y": 1,
+        "z": -18.69,
+        "hp": 8,
+        "ground": "east-bank"
+      },
+      "switches": [
+        [
+          "brook.reed",
+          true
+        ],
+        [
+          "brook.river",
+          true
+        ],
+        [
+          "brook.sun",
+          false
+        ]
+      ]
+    },
+    {
+      "label": "north from east bank",
+      "ok": true,
+      "pose": {
+        "x": 12.88,
+        "y": 1,
+        "z": -23.12,
+        "hp": 8,
+        "ground": "east-bank"
+      }
+    },
+    {
+      "label": "north rune",
+      "pose": {
+        "x": 12.88,
+        "y": 1,
+        "z": -23.12,
+        "hp": 8,
+        "ground": "east-bank"
+      },
+      "switches": [
+        [
+          "brook.reed",
+          true
+        ],
+        [
+          "brook.river",
+          true
+        ],
+        [
+          "brook.sun",
+          true
+        ]
+      ]
+    },
+    {
+      "label": "return down east bank",
+      "ok": true,
+      "pose": {
+        "x": 12.88,
+        "y": 1,
+        "z": -9.86,
+        "hp": 8,
+        "ground": "east-bank"
+      }
+    },
+    {
+      "label": "east stone return",
+      "ok": true,
+      "pose": {
+        "x": 8.38,
+        "y": 0.85,
+        "z": -9.97,
+        "hp": 8,
+        "ground": "east-step"
+      },
+      "frames": 54
+    },
+    {
+      "label": "mill return",
+      "ok": true,
+      "pose": {
+        "x": 3.5,
+        "y": 0.65,
+        "z": -9.97,
+        "hp": 8,
+        "ground": "mill"
+      },
+      "frames": 58
+    },
+    {
+      "label": "north bridge approach",
+      "ok": true,
+      "pose": {
+        "x": -0.18,
+        "y": 0.65,
+        "z": -14.07,
+        "hp": 8,
+        "ground": "mill"
+      }
+    },
+    {
+      "label": "raised bridge",
+      "ok": true,
+      "pose": {
+        "x": 0.05,
+        "y": 1.05,
+        "z": -19.92,
+        "hp": 8,
+        "ground": "brook-bridge"
+      },
+      "frames": 43
+    },
+    {
+      "label": "bridge end",
+      "ok": true,
+      "pose": {
+        "x": 0.05,
+        "y": 1.05,
+        "z": -25.11,
+        "hp": 8,
+        "ground": "brook-bridge"
+      }
+    },
+    {
+      "label": "northern shrine",
+      "ok": true,
+      "pose": {
+        "x": 0.05,
+        "y": 2,
+        "z": -30.05,
+        "hp": 8,
+        "ground": "shrine"
+      },
+      "frames": 39
+    },
+    {
+      "label": "River Bell",
+      "ok": true,
+      "pose": {
+        "x": 0.05,
+        "y": 2,
+        "z": -31.42,
+        "hp": 8,
+        "ground": "shrine"
+      }
+    },
+    {
+      "label": "arch to hearth",
+      "ok": true,
+      "pose": {
+        "x": 0.05,
+        "y": 2,
+        "z": -36.12,
+        "hp": 8,
+        "ground": "shrine"
+      }
+    },
+    {
+      "label": "east path home",
+      "ok": true,
+      "pose": {
+        "x": 18,
+        "y": 0,
+        "z": 2.08,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "village square east",
+      "ok": true,
+      "pose": {
+        "x": 5.88,
+        "y": 0,
+        "z": 2.08,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "village square west",
+      "ok": true,
+      "pose": {
+        "x": -6.17,
+        "y": 0,
+        "z": -0.12,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "west sign approach",
+      "ok": true,
+      "pose": {
+        "x": -18.11,
+        "y": 0,
+        "z": -3.07,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "around west sign",
+      "ok": true,
+      "pose": {
+        "x": -22.15,
+        "y": 0,
+        "z": -3.07,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "arch to sun",
+      "ok": true,
+      "pose": {
+        "x": -22.07,
+        "y": 0,
+        "z": -0.91,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "Sunstep approach",
+      "ok": true,
+      "pose": {
+        "x": -4.1,
+        "y": 0,
+        "z": 11.81,
+        "hp": 8,
+        "ground": "low"
+      }
+    },
+    {
+      "label": "first raised stair",
+      "ok": true,
+      "pose": {
+        "x": -7.45,
+        "y": 0.6,
+        "z": 8.54,
+        "hp": 8,
+        "ground": "rise-a"
+      },
+      "frames": 75
+    },
+    {
+      "label": "lower terrace",
+      "ok": true,
+      "pose": {
+        "x": -11.9,
+        "y": 1.3,
+        "z": 2.42,
+        "hp": 8,
+        "ground": "west"
+      },
+      "frames": 77
+    },
+    {
+      "label": "first spindle",
+      "ok": true,
+      "pose": {
+        "x": -13.17,
+        "y": 1.3,
+        "z": 0.94,
+        "hp": 8,
+        "ground": "west"
+      }
+    },
+    {
+      "label": "eastward terrace edge",
+      "ok": true,
+      "pose": {
+        "x": -4.92,
+        "y": 1.3,
+        "z": -1.08,
+        "hp": 8,
+        "ground": "west"
+      }
+    },
+    {
+      "label": "crosswind ride",
+      "pose": {
+        "x": 3.66,
+        "y": 2.4,
+        "z": -1.08,
+        "hp": 8,
+        "ground": "crosswind"
+      }
+    },
+    {
+      "label": "crosswind crossing",
+      "ok": true,
+      "pose": {
+        "x": 4.85,
+        "y": 3.5,
+        "z": -2.99,
+        "hp": 8,
+        "ground": "east"
+      },
+      "frames": 72
+    },
+    {
+      "label": "second spindle",
+      "ok": true,
+      "pose": {
+        "x": 13.15,
+        "y": 3.5,
+        "z": -9.09,
+        "hp": 7,
+        "ground": "east"
+      }
+    },
+    {
+      "label": "upper crossing edge",
+      "ok": true,
+      "pose": {
+        "x": 3.86,
+        "y": 3.5,
+        "z": -11.57,
+        "hp": 7,
+        "ground": "east"
+      }
+    },
+    {
+      "label": "highwind ride",
+      "pose": {
+        "x": -1.82,
+        "y": 4.5,
+        "z": -15.09,
+        "hp": 7,
+        "ground": "highwind"
+      }
+    },
+    {
+      "label": "highwind crossing",
+      "ok": true,
+      "pose": {
+        "x": -4.57,
+        "y": 5.4,
+        "z": -15.58,
+        "hp": 7,
+        "ground": "upper-west"
+      },
+      "frames": 79
+    },
+    {
+      "label": "high lantern",
+      "ok": true,
+      "pose": {
+        "x": -12.15,
+        "y": 5.4,
+        "z": -18.08,
+        "hp": 8,
+        "ground": "upper-west"
+      }
+    },
+    {
+      "label": "third spindle",
+      "ok": true,
+      "pose": {
+        "x": -9.87,
+        "y": 5.4,
+        "z": -22.12,
+        "hp": 8,
+        "ground": "upper-west"
+      }
+    },
+    {
+      "label": "last stair approach",
+      "ok": true,
+      "pose": {
+        "x": -6.82,
+        "y": 5.4,
+        "z": -23.12,
+        "hp": 8,
+        "ground": "upper-west"
+      }
+    },
+    {
+      "label": "last stair",
+      "ok": true,
+      "pose": {
+        "x": -4.77,
+        "y": 7.3,
+        "z": -26.78,
+        "hp": 8,
+        "ground": "peak"
+      },
+      "frames": 68
+    },
+    {
+      "label": "summit",
+      "ok": true,
+      "pose": {
+        "x": -0.08,
+        "y": 7.3,
+        "z": -30.76,
+        "hp": 8,
+        "ground": "peak"
+      },
+      "frames": 77
+    },
+    {
+      "label": "Sky Bell",
+      "ok": true,
+      "pose": {
+        "x": 1.18,
+        "y": 7.3,
+        "z": -32.34,
+        "hp": 8,
+        "ground": "peak"
+      }
+    },
+    {
+      "label": "arch to hearth",
+      "ok": true,
+      "pose": {
+        "x": 1.02,
+        "y": 7.3,
+        "z": -38.16,
+        "hp": 8,
+        "ground": "peak"
+      }
+    },
+    {
+      "label": "west path home",
+      "ok": true,
+      "pose": {
+        "x": -18,
+        "y": 0,
+        "z": 1,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "middle square",
+      "ok": true,
+      "pose": {
+        "x": -4.85,
+        "y": 0,
+        "z": -0.12,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "northern path",
+      "ok": true,
+      "pose": {
+        "x": 0.12,
+        "y": 0,
+        "z": -19.13,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "arch to moon",
+      "ok": true,
+      "pose": {
+        "x": 0.12,
+        "y": 0,
+        "z": -23.16,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "bramble barrier",
+      "ok": true,
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "z": 9.92,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "sanctuary path",
+      "ok": true,
+      "pose": {
+        "x": -8.15,
+        "y": 0,
+        "z": 7.91,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "first prism",
+      "ok": true,
+      "pose": {
+        "x": -16.09,
+        "y": 0,
+        "z": -7.97,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "first beam path",
+      "ok": true,
+      "pose": {
+        "x": -9.8,
+        "y": 0,
+        "z": -10.12,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "second prism",
+      "ok": true,
+      "pose": {
+        "x": 8,
+        "y": 0,
+        "z": -10.12,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "north beam",
+      "ok": true,
+      "pose": {
+        "x": 10.08,
+        "y": 0,
+        "z": -23.1,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "third prism",
+      "ok": true,
+      "pose": {
+        "x": 10.08,
+        "y": 0,
+        "z": -25.13,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "shrine approach",
+      "ok": true,
+      "pose": {
+        "x": -1.09,
+        "y": 0,
+        "z": -26.07,
+        "hp": 8,
+        "ground": "temple"
+      }
+    },
+    {
+      "label": "moon shrine jump",
+      "ok": true,
+      "pose": {
+        "x": -4.23,
+        "y": 1.1,
+        "z": -26.07,
+        "hp": 8,
+        "ground": "moon-dais"
+      },
+      "frames": 78
+    },
+    {
+      "label": "Moon Bell",
+      "ok": true,
+      "pose": {
+        "x": -9.14,
+        "y": 1.1,
+        "z": -25.2,
+        "hp": 8,
+        "ground": "moon-dais"
+      }
+    },
+    {
+      "label": "arch to hearth",
+      "ok": true,
+      "pose": {
+        "x": -9.1,
+        "y": 1.1,
+        "z": -30.16,
+        "hp": 8,
+        "ground": "moon-dais"
+      }
+    },
+    {
+      "label": "home north",
+      "ok": true,
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "z": -18.92,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "great tree path",
+      "ok": true,
+      "pose": {
+        "x": 9.16,
+        "y": 0,
+        "z": -15.89,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "arch to crown",
+      "ok": true,
+      "pose": {
+        "x": 15.12,
+        "y": 0,
+        "z": -21.09,
+        "hp": 8,
+        "ground": "village"
+      }
+    },
+    {
+      "label": "warden threshold",
+      "ok": true,
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "z": 4.87,
+        "hp": 8,
+        "ground": "arena"
+      }
+    }
+  ],
+  "frames": 11467,
+  "passed": 23,
+  "failed": [],
+  "diagnostics": {
+    "game": "Bramblebound 1.1 - touch edition",
+    "time": "2026-09-07T14:22:54.124Z",
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
+    "size": [
+      844,
+      390
+    ],
+    "urlType": "about:",
+    "errors": [],
+    "graphics": {
+      "calls": 8,
+      "triangles": 101364,
+      "width": 844,
+      "height": 390,
+      "hdr": true,
+      "shadows": false,
+      "safeGraphics": false
+    },
+    "room": "crown",
+    "state": "ending",
+    "storage": false,
+    "touch": true,
+    "touchPoints": 1,
+    "dpr": 1
+  },
+  "errors": [],
+  "console": []
+}

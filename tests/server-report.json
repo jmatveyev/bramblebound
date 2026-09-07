@@ -1,0 +1,27 @@
+{
+  "passed": 5,
+  "failed": [],
+  "tests": [
+    {
+      "name": "Local server GET returns exact game bytes",
+      "passed": true
+    },
+    {
+      "name": "Local server declares UTF-8 HTML",
+      "passed": true
+    },
+    {
+      "name": "Local server HEAD has expected length and no body",
+      "passed": true
+    },
+    {
+      "name": "Local server refuses source paths",
+      "passed": true
+    },
+    {
+      "name": "Optional favicon request has an empty safe response",
+      "passed": true
+    }
+  ],
+  "method": "Python urllib loopback HTTP checks. Does not validate physical phone Wi-Fi access or browser URL launch."
+}

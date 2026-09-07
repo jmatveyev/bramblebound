@@ -1,0 +1,79 @@
+{
+  "passed": 14,
+  "failed": [],
+  "tests": [
+    {
+      "name": "Missing fullscreen leaves a readable normal-tab fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fullscreen rejection does not crash or hide controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "File sharing appears only when reported supported",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Share action hands off a JSON File and reports success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shared payload contains a validated game save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Cancelling native share preserves story and explains cancellation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rejected sharing directs user to download or copy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Clipboard success copies full portable code",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Both unavailable clipboard routes provide manual selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Manual copy fallback selects the complete code",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Typing game letters into import field does not trigger gameplay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Save input uses readable text and disables automatic capitalization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Capability fallbacks produce no uncaught JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Capability fallbacks produce no graphics or JavaScript warnings",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "method": "Chromium 144 software graphics, about:blank, injected fullscreen/share/clipboard responses. Does not validate native mobile UI."
+}

@@ -1,0 +1,613 @@
+{
+  "html_sha256": "f8693ac6b5d52e2f0c01ca8f2774803a2e1934c62ebcad7c98ceaba2cc23c51c",
+  "tests": [
+    {
+      "name": "Touch-capable phone activates complete controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Phone starts with performance graphics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DPR 3 framebuffer stays within 720k pixels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Phone does not require mouse capture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "First objective uses touch vocabulary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Locked ring button is visibly disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Joystick center deadzone prevents drifting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Joystick outer rim provides full sprint speed",
+      "passed": true,
+      "detail": 8.89999942752893
+    },
+    {
+      "name": "Full joystick moves the character",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Lifting movement thumb stops motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Partial stick provides slower controlled walking",
+      "passed": true,
+      "detail": 4.035226915644997
+    },
+    {
+      "name": "A second joystick touch cannot steal first thumb",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Lifting unrelated joystick touch does not stop first thumb",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Movement and held jump work simultaneously",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Jump release does not cancel movement thumb",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Holding Jump produces a higher leap than tapping",
+      "passed": true,
+      "detail": {
+        "held": 1.9933333333333338,
+        "tap": 0.35580000000000006
+      }
+    },
+    {
+      "name": "Second touch jump triggers unlocked air jump",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Quick touchscreen blade tap survives between frames",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Lifting joystick does not release a held blade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Charged spin has visible release feedback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Releasing held Blade executes charged spin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "System touch cancellation clears charge without an unintended spin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Two touches on same action keep it held until last finger lifts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Last action finger releases exactly once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Roll button activates evasive tumble",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Ring launches while movement thumb stays held",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch camera drag works while moving",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pinch-out zooms camera in without page zoom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "View button restores camera yaw and distance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Nearby crate labels context action Push",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hold Push plus movement solves workshop plate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch Use opens real sunring chest reward",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Reward is dismissible without keyboard",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch Talk opens NPC dialogue",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Dialogue displays tap instruction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NPC tutorial contains no keyboard-only Hold E",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All dialogue pages advance with taps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shop purchase is touch accessible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shop exit returns to play by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch Turn rotates a puzzle prism",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Atlas opens by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Puzzle hints use mobile controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Atlas closes by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pause clears all ongoing touches and charge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Paused game simulation does not move",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Disabling touch exposes touch-only rescue",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch controls can be restored without keyboard",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch camera speed setting updates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch resume works after settings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Rotating during two-thumb play pauses and clears controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Resuming after rotation does not keep an old action held",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "App interruption / blur pauses gameplay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pagehide pauses before browser suspension",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Phone export opens portable save panel",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Portable code contains current progress",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Share is hidden when unsupported",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Touch JSON export produces valid file",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unavailable clipboard has a readable copy fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Invalid pasted save preserves existing story",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Valid pasted save restores through touch UI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Phone file-picker import restores JSON save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unavailable storage directs player to portable saves",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hidden tab pauses and suspends audio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "User tap resumes after hidden-tab pause",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "320x568: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 502
+      }
+    },
+    {
+      "name": "320x568: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320x568: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "360x640: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "360x640: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "360x640: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "360x640: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "360x640: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 480
+      }
+    },
+    {
+      "name": "360x640: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "360x640: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "390x844: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 551
+      }
+    },
+    {
+      "name": "390x844: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390x844: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "430x932: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "430x932: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "430x932: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "430x932: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "430x932: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 389
+      }
+    },
+    {
+      "name": "430x932: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "430x932: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "667x375: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "667x375: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "667x375: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "667x375: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "667x375: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 261
+      }
+    },
+    {
+      "name": "667x375: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "667x375: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "844x390: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 266
+      }
+    },
+    {
+      "name": "844x390: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "844x390: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Simulated landscape notch and home indicator keep controls inside safe area",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: all gameplay touch targets fit viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: action targets are at least 44 CSS px",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: joystick, action, and HUD hitboxes do not overlap",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "1024x768: no page horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: settings scroll with a real swipe",
+      "passed": true,
+      "detail": {
+        "scroll": 117
+      }
+    },
+    {
+      "name": "1024x768: settings Back remains reachable by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024x768: long shop can be closed by touch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No external resource requests in mobile tests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No uncaught JavaScript exceptions in mobile tests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No graphics or JavaScript console warnings in successful mobile tests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 117,
+  "failed": [],
+  "errors": [],
+  "console": [],
+  "requests": [],
+  "method": "Chromium 144 Linux, software WebGL under Xvfb. CDP touch inputs, DPR 3, about:blank injection. Not physical iOS/Android hardware."
+}
