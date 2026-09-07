@@ -1,77 +1,50 @@
-# GitHub repository setup
+# GitHub hosting setup
 
-This package contains BRAMBLEBOUND 1.1 Touch Edition. Preparing this package
-has not created a GitHub repository, uploaded any files, or enabled a public site.
-The game code is unchanged from the supplied Touch Edition.
+## Repository
 
-## Create the repository
+BRAMBLEBOUND 1.1 Touch Edition is published at:
+https://github.com/jmatveyev/bramblebound
 
-Suggested owner: `jmatveyev`. Suggested name: `bramblebound`.
+The repository is public at the owner's request. No open-source license has been
+selected. Game code is unchanged from the delivered Touch Edition.
 
-Create form:
-https://github.com/new?owner=jmatveyev&name=bramblebound&visibility=private&description=BRAMBLEBOUND%201.1%20Touch%20Edition
+## Enable the playable website
 
-Private is the suggested starting visibility. Change it only deliberately.
-No open-source license has been added on your behalf.
+Repository publication and website hosting are separate. Open:
+https://github.com/jmatveyev/bramblebound/settings/pages
 
-For a connector-based upload, enable Add a README when creating the repository.
-This creates an initial branch and commit. Grant the connected GitHub app access
-to the new repository if its installation is limited to selected repositories.
-Then supply the repository URL in the chat. Repository creation and repository
-file editing are separate capabilities; the currently available connector
-exposes file editing but not repository creation.
+Under Build and deployment:
 
-## Files to upload
+1. Set Source to **Deploy from a branch**.
+2. Set Branch to **main** and Folder to **/docs**.
+3. Save. Use the website address shown by GitHub after deployment succeeds.
 
-Unzip the package and place the CONTENTS of the bramblebound folder at the
-repository root, not the ZIP itself and not an extra enclosing folder.
-Preserve source/, tests/, screenshots/, and docs/.
-The prepared README.md should replace the initial GitHub-generated README.
+The intended address is https://jmatveyev.github.io/bramblebound/.
+It is not confirmed live merely because these instructions exist.
 
-- index.html: complete playable game at the repository root.
-- bramblebound.html: identical standalone entry used by existing test launchers.
-- docs/index.html: identical game-only GitHub Pages publishing entry.
-- docs/.nojekyll: static publishing marker.
-- source/: editable game source.
-- tests/: existing diagnostic suites, fixtures, and recorded results.
-- TESTING.md and verification.json: prior test results and limitations.
-- WALKTHROUGH.md: full story spoilers.
-- serve.py: optional trusted-LAN development server.
-- build_site.py: rebuilds all three entry points.
+Only docs/ is the intended website payload. It contains the self-contained game
+and .nojekyll. The source and testing materials remain in the public repository,
+but are not separately served as website pages by this configuration.
 
-## Optional: enable a phone-accessible play URL
+Open the live website in a normal phone browser tab, not an attachment preview.
+There is no backend, game account, or external asset dependency. Browser saves
+are local to their origin; export saves before changing browser or website.
 
-Creating a repository alone does NOT host the game as a playable website.
-After the files have been uploaded, use the repository's Settings > Pages:
+## Future updates
 
-1. Choose Deploy from a branch as the publishing source.
-2. Choose main (or the actual default branch) and the /docs folder.
-3. Save, then use the live website URL shown by GitHub after deployment succeeds.
-
-Only docs/ is the intended website payload. Do not select the repository root
-unless you also intend to publish its source, test files, and documentation.
-The delivered browser game itself includes its JavaScript and is downloadable
-by visitors. A private repository does not make a published game secret.
-
-GitHub Pages for a private repository requires an eligible paid plan. GitHub Free
-supports Pages for public repositories. Do not change repository visibility just
-to enable Pages without considering whether the source should be public.
-Pages sites are generally public even when the backing repository is private.
-No Pages deployment has been performed or verified for this package.
-
-## Rebuild after editing
-
-From the repository root, run:
+After editing source, run:
 
     python3 build_site.py
 
-Commit all three updated HTML entry points. The build uses only Python's
-standard library. Existing browser tests have additional requirements described
-in TESTING.md. Their recorded results were not rerun for this packaging task.
-The packaging task verifies byte-identical rebuilds, not phone compatibility.
+Commit the updated source and all three HTML outputs. Refresh SHA256SUMS for
+changed files, then commit the refreshed manifest. The Build integrity workflow
+checks byte-identical rebuilding and file integrity, not gameplay or device
+compatibility. Historical gameplay checks and limitations are in TESTING.md.
 
-## References
+Once main /docs publishing is enabled, later commits to that publishing source
+are eligible for Pages deployment. Check the repository Actions tab for failures.
 
-GitHub documentation checked September 7, 2026:
-- https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository
-- https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+## Official reference
+
+GitHub Pages publishing-source instructions, checked September 7, 2026:
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

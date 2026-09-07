@@ -1,5 +1,0 @@
-{
-  "parts": ["part-01.bin", "part-02.bin", "part-03.bin", "part-04.bin", "part-05.bin", "part-06.bin", "part-07.bin", "part-08.bin"],
-  "sha256": "c768e9e3ab5bdd8e9b526a229c0f96712afe13e4be992116c43418196abc6dc7",
-  "file_count": 39
-}

@@ -8,10 +8,16 @@ or graphics driver has been verified. See TESTING.md.
 
 ## GitHub layout
 
-The repository-ready package includes `docs/index.html` for an isolated GitHub
-Pages publishing folder. See [GITHUB_SETUP.md](GITHUB_SETUP.md) for repository
-creation, upload, and optional phone-accessible hosting. Packaging alone does
-not create a repository or a live website.
+Published source repository: [jmatveyev/bramblebound](https://github.com/jmatveyev/bramblebound).
+
+The complete game, editable source, walkthrough, diagnostic suites, and recorded
+reports are committed here. `docs/index.html` is the isolated GitHub Pages entry.
+
+**Website activation:** In [Settings > Pages](https://github.com/jmatveyev/bramblebound/settings/pages),
+select **Deploy from a branch**, **main**, and **/docs**, then Save. The intended
+play address is https://jmatveyev.github.io/bramblebound/ and becomes usable only
+after that configuration and a successful Pages deployment. Repository publication
+alone does not activate hosting. See [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 Run `python3 build_site.py` after source edits to update the standalone, root,
 and GitHub Pages copies together. No open-source license was selected.
@@ -19,8 +25,8 @@ and GitHub Pages copies together. No open-source license was selected.
 ## Playing on a phone
 
 The intended phone launch is a normal website URL in Safari or Chrome, not a
-preview of a downloaded HTML attachment. This package has not been published to
-a public URL. Use one of these delivery routes:
+preview of a downloaded HTML attachment. The game website must be enabled separately from this repository.
+Use one of these delivery routes:
 
 **Website:** Publish the included `index.html` through a static HTTPS web host,
 then open that site's URL on the phone. No build, backend, account inside the
@@ -134,13 +140,22 @@ mouse/touch. Controller hardware was not independently tested.
 - `serve.py`: optional standard-library local server for trusted-LAN testing.
 - `TESTING.md`, `verification.json`: results, integrity record, and limitations.
 - `tests/`: automated checks and their reports.
-- `screenshots/`: actual-renderer phone layouts; some scene placement is staged.
 - `WALKTHROUGH.md`: optional full-route help.
 
-Rebuild both entry points after editing:
+Rebuild all three entry points after editing:
 
-    python3 source/build.py
-    python3 source/build.py --output index.html
+    python3 build_site.py
+
+The read-only Build integrity workflow checks that committed outputs rebuild
+without changes and verifies SHA256SUMS. Refresh that manifest after deliberate
+source or documentation edits. This workflow does not run the browser gameplay
+suites and is not physical-phone certification.
+
+The initial repository import rebuilt all three HTML files and checked their
+209,378-byte content against the delivered Touch Edition's SHA-256:
+`f8693ac6b5d52e2f0c01ca8f2774803a2e1934c62ebcad7c98ceaba2cc23c51c`.
+The historical test records are unchanged. Optional QA screenshot PNGs from the
+downloadable package are not included here; they are not game assets.
 
 No third-party packages are needed to build or serve. Tests additionally require
 Python Playwright, Chromium, and Xvfb on Linux; see TESTING.md. This remains a

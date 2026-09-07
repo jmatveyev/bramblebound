@@ -1,0 +1,29 @@
+name: Build integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check committed file integrity
+        run: sha256sum --check SHA256SUMS
+      - name: Rebuild all playable entry points
+        run: python3 build_site.py
+      - name: Require reproducible outputs
+        run: |
+          git diff --exit-code -- index.html bramblebound.html docs/index.html source/combined.js
+          cmp index.html bramblebound.html
+          cmp index.html docs/index.html
