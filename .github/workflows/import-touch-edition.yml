@@ -1,0 +1,78 @@
+name: Import verified Touch Edition
+
+on:
+  push:
+    branches: [main]
+    paths: ['.bootstrap/package.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-touch-edition
+  cancel-in-progress: false
+
+jobs:
+  import:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the upload commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Verify, unpack, and rebuild the original game
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, lzma, pathlib, subprocess, sys
+          root = pathlib.Path.cwd()
+          manifest = root / '.bootstrap/package.json'
+          if not manifest.exists():
+              print('No pending package. Nothing to import.')
+              sys.exit(0)
+          spec = json.loads(manifest.read_text())
+          data = b''.join((root / '.bootstrap' / name).read_bytes() for name in spec['parts'])
+          if hashlib.sha256(data).hexdigest() != spec['sha256']:
+              raise SystemExit('Package checksum mismatch; refusing to import.')
+          files = json.loads(lzma.decompress(data, memlimit=268435456).decode('utf-8'))
+          if len(files) != spec['file_count']:
+              raise SystemExit('Unexpected file count.')
+          for name, text in files.items():
+              p = pathlib.PurePosixPath(name)
+              if p.is_absolute() or '..' in p.parts or p.parts[0] in {'.git', '.github', '.bootstrap'}:
+                  raise SystemExit('Unsafe package path: ' + name)
+              destination = root / p
+              if destination.exists() and destination.read_text(encoding='utf-8') != text:
+                  raise SystemExit('Refusing to overwrite an existing different file: ' + name)
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              destination.write_text(text, encoding='utf-8')
+          subprocess.run([sys.executable, 'build_site.py'], check=True)
+          expected = 'f8693ac6b5d52e2f0c01ca8f2774803a2e1934c62ebcad7c98ceaba2cc23c51c'
+          generated = ['bramblebound.html', 'index.html', 'docs/index.html', 'source/combined.js']
+          for name in generated[:3]:
+              body = (root / name).read_bytes()
+              if len(body) != 209378 or hashlib.sha256(body).hexdigest() != expected:
+                  raise SystemExit('Game integrity verification failed: ' + name)
+          # Screenshots are optional development artifacts, not runtime assets.
+          # Keep checksums scoped to the files actually included in this import.
+          paths = sorted(set(files) | set(generated))
+          checks = ''.join(hashlib.sha256((root / name).read_bytes()).hexdigest() + '  ' + name + '\n'
+                           for name in paths if name != 'SHA256SUMS')
+          (root / 'SHA256SUMS').write_text(checks, encoding='utf-8')
+          subprocess.run(['git', 'add', '--'] + paths, check=True)
+          print('Verified all three playable builds against the delivered Touch Edition.')
+          PY
+      - name: Commit the verified game files
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then
+            echo 'No changes to publish.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Publish BRAMBLEBOUND 1.1 Touch Edition, source, and verification reports'
+          git push origin HEAD:main
