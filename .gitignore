@@ -1,0 +1,14 @@
+# Local development files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.log
+# Personal save backups do not belong in source control.
+/bramblebound-save*.json
+# Temporary browser-test output; published reports remain tracked.
+/tests/*-qa/
